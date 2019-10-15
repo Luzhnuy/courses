@@ -1,6 +1,6 @@
 users = [
     {
-    'username' : 'lubchik',
+     'username' : 'lubchik',
      'password' : 'luzhnuy',
      'birthday' : '18.11.2000'
      },
@@ -17,6 +17,7 @@ users = [
     {'username' : 'Nastia', 'password' : 'Nuzhna', 'birthday' : '18.11.2001'},
 ]
 
+
 username = input("Login: ")
 password = input("password: ")
 
@@ -25,8 +26,12 @@ message = ""
 for user in users:
     if user['username'] == username:
         if user['password'] == password:
-            message = "Ви увiйшли"
-            break
+            if int(user['birthday'][6:]) <= 2001:
+                message = "Ви увiйшли"
+                break
+            else:
+                message = "Вам нема 18"
+                break
         else:
             message = "Неправильний пароль"
             break
