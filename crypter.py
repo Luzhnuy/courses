@@ -1,9 +1,15 @@
-def sum_of_two(a,b,c):
-    print(a + b + c)
+word = input(" : ")
+dec_word = []
+numbers = ""
 
+for a in word:
+    if a.isdigit():
+        numbers+=a
+    else:
+        z = ord(a)+1
+        dec_word.append(chr(z))
 
+print(''.join(dec_word),end='')
 
-
-sum_of_two(5,10, 2)
-sum_of_two(10,20, 3)
-sum_of_two(10,25, 5)
+if numbers.isdigit():
+    print(int(numbers) + 1)
