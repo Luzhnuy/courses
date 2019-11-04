@@ -1,15 +1,4 @@
-word = input(" : ")
-dec_word = []
-numbers = ""
+from functions import *
 
-for a in word:
-    if a.isdigit():
-        numbers+=a
-    else:
-        z = ord(a)+1
-        dec_word.append(chr(z))
-
-print(''.join(dec_word),end='')
-
-if numbers.isdigit():
-    print(int(numbers) + 1)
+arr = [1,2,3,5,65,6,213,123,123123,512321312,123,2]
+equeal_elements(arr)
